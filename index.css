@@ -79,7 +79,8 @@ p {
 
 /* Section Mon Parcours */
 #parcours {
-  background-color: #333;
+  margin-left: 18%;
+  background-color: #1d1c1c;
   padding: 40px 20px;
   margin-top: 50px;
   border-radius: 10px;
@@ -156,10 +157,6 @@ p {
   padding: 20px;
 }
 
-.project-list > div {
-  margin-bottom: 30px;
-}
-
 #projects img {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -194,11 +191,11 @@ p {
 
 /* Section Contact */
 #contact {
-  text-align: center;
+  margin: 0;
+  padding: 20x 0px; /* ajustable mais pas trop grand */
   background-color: #000000;
-  padding: 30px 0;
-  margin-top: 50px;
 }
+
 
 #contact h2 {
   font-size: 2rem;
@@ -226,10 +223,11 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 20px;
+  padding: 8px 10px;
   border-radius: 25px;
   transition: background-color 0.3s, color 0.3s;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: rgb(43, 43, 43);
+  box-shadow: 0 4px 6px rgba(43, 43, 43, 0.1);
 }
 
 .contact-link:hover {
@@ -241,11 +239,16 @@ p {
   font-size: 1.5rem;
 }
 
-/* Réduction de la hauteur du footer */
+
 footer {
-  padding: 10px 0;
-  background-color: #000000;
-  margin-top: 20px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 5px 0;       /* Réduit l’espace vertical */
+  font-size: 0.85rem;    /* Texte un peu plus petit */
+  line-height: 1.2;      /* Moins d’interligne */
+  bottom: 0;
+  left: 0;
 }
 
 /* Canvas d'animation */
