@@ -11,7 +11,6 @@
   }
   
   /* RESTE INCHANGÉ */
-  
   body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
@@ -36,11 +35,6 @@
     padding: 30px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     text-align: center;
-  }
-  
-  .logo {
-    width: 80%;
-    margin-bottom: 30px;
   }
   
   .login-form input {

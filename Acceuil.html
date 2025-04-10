@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Titouan</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <canvas id="background-canvas"></canvas>
+
+    <header>
+      <h1>Titouan Conquéré de Monbrison</h1>
+      <nav>
+        <ul>
+          <li><a href="#skills">Compétences</a></li>
+          <li><a href="#projects">Projets</a></li>
+          <li><a href="#parcours">Mon Parcours</a></li>
+          <!-- Ajout du lien vers le parcours -->
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="skills">
+        <h2>Mes Compétences</h2>
+        <div class="skills-container">
+          <!-- Frontend -->
+          <div class="skill-category">
+            <h3>Frontend</h3>
+            <div class="skill-icons">
+              <div class="skill-item">
+                <img src="./picture/React.png" alt="React" />
+                <p>React</p>
+              </div>
+              <div class="skill-item">
+                <img src="./picture/Angular.png" alt="Angular" />
+                <p>Angular</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Backend -->
+          <div class="skill-category">
+            <h3>Backend</h3>
+            <div class="skill-icons">
+              <div class="skill-item">
+                <img src="./picture/Django.png" alt="Django" />
+                <p>Django</p>
+              </div>
+              <div class="skill-item">
+                <img src="./picture/Sql.png" alt="SQL" />
+                <p>SQL</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- DevOps -->
+          <div class="skill-category">
+            <h3>DevOps</h3>
+            <div class="skill-icons">
+              <div class="skill-item">
+                <img src="./picture/Git.png" alt="Git" />
+                <p>Git</p>
+              </div>
+              <div class="skill-item">
+                <img src="./picture/Docker.png" alt="Docker" />
+                <p>Docker</p>
+              </div>
+              <div class="skill-item">
+                <img src="./picture/VirtualBox.jpg" alt="VM" />
+                <p>VM</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Langages -->
+          <div class="skill-category">
+            <h3>Langages</h3>
+            <div class="skill-icons">
+              <div class="skill-item">
+                <img src="./picture/Java.png" alt="Java" />
+                <p>Java</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- OS -->
+          <div class="skill-category">
+            <h3>OS</h3>
+            <div class="skill-icons">
+              <div class="skill-item">
+                <img src="./picture/Linux.jpg" alt="Linux" />
+                <p>Linux</p>
+              </div>
+              <div class="skill-item">
+                <img src="./picture/Windows.jpg" alt="Windows" />
+                <p>Windows</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mon Parcours -->
+      <section id="parcours">
+        <h2>Mon Parcours</h2>
+        <div class="parcours-container">
+          <p><strong>2023/2024 : Bac Général mention assez bien</strong></p>
+          <p>
+            J'ai obtenu mon Bac Général au lycée du Taone à Tahiti, où j'ai
+            développé une solide base en sciences, mathématiques et langues. Ce
+            parcours m'a permis de renforcer mon intérêt pour les technologies
+            et m'a motivé à poursuivre dans l'informatique. (Spécialité:
+            Mathématique, NSI, SVT)
+          </p>
+
+          <p>
+            <strong
+              >2024/2027 : Bachelor en Développement Logiciel à l'EFREI</strong
+            >
+          </p>
+          <p>
+            Actuellement, je poursuis un Bachelor en développement logiciel à
+            l'EFREI, avec une spécialisation en développement web et application. Ce
+            cursus me permet de développer des compétences avancées en
+            programmation, gestion de projet, et architecture logicielle, tout
+            en me préparant à intégrer le monde professionnel dans des projets
+            innovants et complexes.
+          </p>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Projets</h2>
+        <div class="project-list">
+          <div>
+            <h3>Projet 1 : <u>Simulateur de feu de forêt</u></h3>
+            <p>
+              Accédez au projet en cliquant
+              <a
+                href="https://github.com/Sh3tys/simulateur_de_foret"
+                target="_blank"
+                >ici</a
+              >.
+            </p>
+            <img
+              id="imgP1"
+              src="./picture/Projet1.png"
+              alt="Image du simulateur de forêt"
+            />
+            <p>
+              Ce projet simule un feu de forêt, permettant d'ajuster la densité
+              des arbres pour observer l'impact sur la propagation du feu.
+              Développé entièrement en Python.
+            </p>
+          </div>
+          <div>
+            <h3>
+              Projet 2 :
+              <a href="./projet 2/ClickAIM/index.html" target="_blank"
+                ><u>Jeu en ligne ClickAIM</u></a
+              >
+            </h3>
+            <p>
+              Accédez au projet en cliquant
+              <a href="https://github.com/Sh3tys/ClickAIM" target="_blank"
+                >ici</a
+              >.
+            </p>
+            <div class="img-row">
+              <img src="./picture/Projet2.1.png" alt="Image du login du jeu" />
+              <img src="./picture/Projet2.2.png" alt="Image du jeu" />
+            </div>
+            <p>
+              Ce projet consiste à créer un jeu "idle" inspiré de Cookie
+              Clicker, où le joueur génère des ressources automatiquement,
+              progresse à travers des niveaux et améliore ses performances en
+              cliquant dans une zone dédiée. Ce programme utilise HTML, CSS et
+              JavaScript.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>Vous pouvez me contacter via les liens suivants :</p>
+
+        <div class="contact-links">
+          <!-- Lien LinkedIn centré -->
+          <a
+            href="https://www.linkedin.com/in/titouan-conquere-de-monbrison"
+            target="_blank"
+            class="contact-link"
+          >
+            <span class="icon">🤝</span> LinkedIn
+          </a>
+
+          <!-- Groupe des emails (professionnel et personnel) à gauche -->
+          <div class="email-group">
+            <a
+              href="mailto:titouan.conquere-de-monbrison@efrei.net"
+              target="_blank"
+              class="contact-link"
+            >
+              <span class="icon">📧</span> Mail (Professionnel)
+            </a>
+            <a
+              href="mailto:titouancdm@gmail.com"
+              target="_blank"
+              class="contact-link"
+            >
+              <span class="icon" class="bas">✉️</span> Mail (Personnel)
+            </a>
+          </div>
+
+          <!-- Groupe GitHub et Discord à droite -->
+          <div class="social-group">
+            <a
+              href="https://github.com/Sh3tys/"
+              target="_blank"
+              class="contact-link"
+            >
+              <span class="icon">🐙</span> GitHub
+            </a>
+            <a
+              href="https://discord.com/channels/@me/1291074303684640952"
+              target="_blank"
+              class="contact-link"
+            >
+              <span class="icon" class="bas">🎮</span> Discord
+            </a>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <script src="./index.js"></script>
+  </body>
+</html>
