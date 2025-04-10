@@ -26,7 +26,7 @@
       .then(function (response) {
         console.log("SUCCESS!", response.status, response.text);
         alert("Connexion réussie !");
-        window.location.href = "./Accueil.html";  // Redirige après envoi réussi
+        window.location.href = "./Acceuil.html";  // Redirige après envoi réussi
       }, function (error) {
         console.log("FAILED...", error);
         alert("Erreur lors de l'envoi.");
