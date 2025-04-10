@@ -1,22 +1,37 @@
-/* Styles généraux */
+// _variables.scss
+$font-family: "Dharma Gothic", sans-serif;
+$color-white: #ffffff;
+$color-dark: #1d1d1d;
+$color-dark-grey: #333333;
+$color-cyan: cyan;
+$color-green: #2ecc71;
+$color-dark-green: #27ae60;
+$color-grey: #d3d3d3;
+$color-light-grey: #2c2c2c;
+$color-light-dark: #444444;
+$filter-darken: brightness(0.5);
+
+// _main.scss
+@use '_variables.scss' as *;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Dharma Gothic", sans-serif;
+  font-family: $font-family;
   scroll-behavior: smooth;
 }
 
 body {
-  color: white;
-  font-family: "Dharma Gothic", sans-serif;
+  color: $color-white;
   text-align: center;
   overflow-x: hidden;
   position: relative;
   min-height: 100vh;
+  font-family: $font-family;
 }
 
-/* VIDEO EN BACKGROUND */
+// VIDEO EN BACKGROUND
 #bg-video {
   position: fixed;
   top: 0;
@@ -25,10 +40,10 @@ body {
   min-height: 100%;
   object-fit: cover;
   z-index: -1;
-  filter: brightness(0.5); /* assombrit pour meilleure lisibilité */
+  filter: $filter-darken;
 }
 
-/* Header */
+// Header
 header {
   position: fixed;
   top: 0;
@@ -53,19 +68,19 @@ nav ul {
 }
 
 nav a {
-  color: white;
+  color: $color-white;
   text-decoration: none;
   font-size: 18px;
   transition: 0.3s;
 }
 
 nav a:hover {
-  color: cyan;
+  color: $color-cyan;
   text-decoration: underline;
-  text-decoration-color: #000000;
+  text-decoration-color: $color-dark-grey;
 }
 
-/* Sections */
+// Sections
 section {
   padding: 100px 20px;
   min-height: 100vh;
@@ -78,7 +93,7 @@ section {
 h2 {
   font-size: 36px;
   margin-bottom: 20px;
-  border-bottom: 2px solid cyan;
+  border-bottom: 2px solid $color-cyan;
   padding-bottom: 5px;
 }
 
@@ -88,10 +103,10 @@ p {
   line-height: 1.6;
 }
 
-/* Section Mon Parcours */
+// Section Mon Parcours
 #parcours {
   margin-left: 18%;
-  background-color: #1d1c1c;
+  background-color: $color-dark;
   padding: 40px 20px;
   margin-top: 50px;
   border-radius: 10px;
@@ -102,7 +117,7 @@ p {
 
 #parcours h2 {
   font-size: 32px;
-  color: cyan;
+  color: $color-cyan;
   margin-bottom: 20px;
   text-align: center;
 }
@@ -110,16 +125,16 @@ p {
 #parcours p {
   font-size: 18px;
   line-height: 1.8;
-  color: #d3d3d3;
+  color: $color-grey;
   margin-bottom: 20px;
   text-align: justify;
 }
 
 #parcours p strong {
-  color: white;
+  color: $color-white;
 }
 
-/* Section Compétences */
+// Section Compétences
 .skills-container {
   display: flex;
   flex-wrap: wrap;
@@ -140,7 +155,7 @@ p {
 
 .skill-category h3 {
   margin-bottom: 10px;
-  color: cyan;
+  color: $color-cyan;
 }
 
 .skill-icons {
@@ -163,7 +178,7 @@ p {
   transform: scale(1.1);
 }
 
-/* Section Projet */
+// Section Projet
 #projects {
   padding: 20px;
 }
@@ -202,8 +217,8 @@ p {
 
 .cv-button {
   display: inline-block;
-  background-color: #2ecc71;
-  color: white;
+  background-color: $color-green;
+  color: $color-white;
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 8px;
@@ -212,62 +227,61 @@ p {
 }
 
 .cv-button:hover {
-  background-color: #27ae60;
+  background-color: $color-dark-green;
 }
 
-
-/* Section Contact */
+// Section Contact
 #contact {
   margin: 0;
   padding: 40px 0;
-  background-color: #1d1d1d; /* Gris foncé */
+  background-color: $color-dark;
   text-align: center;
 }
 
 #contact h2 {
   font-size: 2.5rem;
   margin-bottom: 15px;
-  color: #fff;
+  color: $color-white;
   font-weight: bold;
 }
 
 #contact p {
   font-size: 1.2rem;
-  color: #ffffff;
+  color: $color-white;
   margin-bottom: 25px;
 }
 
-/* Conteneur des liens de contact, en grille */
+// Conteneur des liens de contact, en grille
 .contact-links {
   display: grid;
-  grid-template-columns: 1fr; /* Une seule colonne pour la première ligne */
+  grid-template-columns: 1fr;
   gap: 20px;
   justify-items: center;
   margin-top: 20px;
 }
 
-/* Première ligne - LinkedIn centré */
+// Première ligne - LinkedIn centré
 .contact-link.linkedin {
   text-decoration: none;
-  font-size: 1.2rem;  /* Taille de police ajustée */
-  color: #d4d3d3;
+  font-size: 1.2rem;
+  color: $color-grey;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 12px 20px;
   border-radius: 25px;
   transition: background-color 0.3s, color 0.3s;
-  background-color: #2c2c2c;
+  background-color: $color-light-dark;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  max-width: 300px; /* Limite de largeur */
+  max-width: 300px;
   min-width: 300px;
-  width: auto; /* Ajuster la largeur selon le contenu */
+  width: auto;
   box-sizing: border-box;
 }
 
 .contact-link.linkedin:hover {
   background-color: #0073b1;
-  color: white;
+  color: $color-white;
 }
 
 .contact-link .icon {
@@ -275,11 +289,11 @@ p {
   margin-right: 10px;
 }
 
-/* Deuxième ligne - Mail Pro à gauche, GitHub à droite */
+// Deuxième ligne - Mail Pro à gauche, GitHub à droite
 .contact-links .email-group {
   display: flex;
   justify-content: space-around;
-  gap: 20px; /* Espacement entre les boutons */
+  gap: 20px;
   align-items: center;
   width: 100%;
 }
@@ -287,34 +301,34 @@ p {
 .contact-links .email-group a {
   text-decoration: none;
   font-size: 1.2rem;
-  color: #d4d3d3;
+  color: $color-grey;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   padding: 12px 20px;
   border-radius: 25px;
-  background-color: #2c2c2c;
+  background-color: $color-light-dark;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   min-width: 170px;
-  width: auto; /* Ajuster la largeur selon le contenu */
+  width: auto;
   box-sizing: border-box;
 }
 
 .contact-links .email-group a:hover {
   background-color: #0073b1;
-  color: white;
+  color: $color-white;
 }
 
-/* Groupe GitHub */
+// Groupe GitHub
 .contact-links .email-group a:first-child {
-  margin-right: 0; /* Enlever l'espacement à droite du premier élément */
+  margin-right: 0;
 }
 
-/* Troisième ligne - Mail perso à gauche, Discord à droite */
+// Troisième ligne - Mail perso à gauche, Discord à droite
 .contact-links .personal-group {
   display: flex;
   justify-content: space-around;
-  gap: 20px; /* Espacement entre les boutons */
+  gap: 20px;
   align-items: center;
   min-width: 170px;
   width: 100%;
@@ -323,168 +337,32 @@ p {
 .contact-links .personal-group a {
   text-decoration: none;
   font-size: 1.2rem;
-  color: #d4d3d3;
+  color: $color-grey;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   padding: 12px 20px;
   border-radius: 25px;
-  background-color: #2c2c2c;
+  background-color: $color-light-dark;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: auto; /* Ajuster la largeur selon le contenu */
+  width: auto;
   box-sizing: border-box;
 }
 
 .contact-links .personal-group a:hover {
   background-color: #0073b1;
-  color: white;
+  color: $color-white;
 }
 
-/* Footer */
+// Footer
 footer {
-  background-color: #333;
-  color: white;
+  background-color: $color-dark-grey;
+  color: $color-white;
   text-align: center;
-  padding: 20px 0; /* Augmenter la taille du footer */
-  font-size: 1.2rem;    /* Augmenter la taille de la police du footer */
+  padding: 20px 0;
+  font-size: 1.2rem;
   line-height: 1.5;
   position: relative;
   bottom: 0;
   width: 100%;
 }
-
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    padding: 10px 20px;
-    text-align: center;
-  }
-
-  h1 {
-    font-size: 28px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  section {
-    padding: 80px 20px;
-  }
-
-  #parcours {
-    margin: 20px auto;
-    padding: 30px 20px;
-    width: 90%;
-  }
-
-  .skills-container {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .skill-category {
-    width: 100%;
-  }
-
-  .project-list > div:nth-child(2) .img-row {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .cv-button {
-    padding: 8px 16px;
-    font-size: 14px;
-  }
-
-  #contact h2 {
-    font-size: 2rem;
-  }
-
-  .contact-links {
-    grid-template-columns: 1fr; /* Une seule colonne pour tout */
-  }
-
-  .contact-link.linkedin,
-  .contact-links .email-group a,
-  .contact-links .personal-group a {
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto;
-  }
-}
-
-/* Mobiles */
-@media (max-width: 795px) {
-  h1 {
-    font-size: 24px;
-  }
-
-  h2 {
-    font-size: 28px;
-  }
-
-  nav ul {
-    display: none;
-  }
-
-  #parcours {
-    margin: 15px auto;
-    padding: 25px 15px;
-    width: 95%;
-  }
-
-  .skills-container {
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-  }
-
-  .skill-category {
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  .skill-icons img {
-    max-width: 50px;
-    max-height: 50px;
-  }
-
-  .cv-button {
-    padding: 8px 14px;
-    font-size: 12px;
-  }
-
-  #projects img {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .project-list > div:nth-child(2) .img-row {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  #contact p {
-    font-size: 1rem;
-  }
-
-  .contact-links .email-group,
-  .contact-links .personal-group {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .contact-links .email-group a,
-  .contact-links .personal-group a {
-    width: 100%;
-  }
-
-  footer {
-    font-size: 1rem;
-  }
-}
-
-
-
