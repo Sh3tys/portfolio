@@ -25,7 +25,7 @@
     emailjs.send("service_50vwsmg", "template_l2cmtvo", templateParams)
       .then(function (response) {
         console.log("Connexion succes");
-        window.location.href = "./Acceuil.html";  // Redirige après envoi réussi
+        window.location.href = "./AcceuilPage/Acceuil.html";  // Redirige après envoi réussi
       }, function (error) {
         console.log("FAILED: un problème est survenu veuillez-vous connecter sans mail !");
       });

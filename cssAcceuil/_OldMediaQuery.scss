@@ -1,0 +1,72 @@
+@use 'variablesOld' as *;
+
+@media (max-width: 795px) {
+    h1 {
+      font-size: 24px;
+    }
+  
+    h2 {
+      font-size: 28px;
+    }
+  
+    nav ul {
+      display: none;
+    }
+  
+    #parcours {
+      margin: 15px auto;
+      padding: 25px 15px;
+      width: 95%;
+    }
+  
+    .skills-container {
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+  
+    .skill-category {
+      width: 100%;
+      margin: 0 auto;
+    }
+  
+    .skill-icons img {
+      max-width: 50px;
+      max-height: 50px;
+    }
+  
+    .cv-button {
+      padding: 8px 14px;
+      font-size: 12px;
+    }
+  
+    #projects img {
+      width: 100%;
+      max-width: 100%;
+    }
+  
+    .project-list > div:nth-child(2) .img-row {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    #contact p {
+      font-size: 1rem;
+    }
+  
+    .contact-links .email-group,
+    .contact-links .personal-group {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .contact-links .email-group a,
+    .contact-links .personal-group a {
+      width: 100%;
+    }
+  
+    footer {
+      font-size: 1rem;
+    }
+  }
+  
