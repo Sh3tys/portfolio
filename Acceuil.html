@@ -4,10 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio - Titouan</title>
-    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./Acceuil.css" />
+    <link rel="icon" type="image/png" href="./picture/MinecraftPlayer.png">
   </head>
   <body>
-    <canvas id="background-canvas"></canvas>
+    <!-- VIDEO BACKGROUND -->
+    <video autoplay muted loop id="bg-video">
+      <source src="./Video/Minecraft_live_wallpaper_1.mp4" type="video/mp4">
+    </video> 
 
     <header>
       <h1>Titouan Conquéré de Monbrison</h1>
@@ -183,61 +187,53 @@
           </div>
         </div>
       </section>
+
+      <section id="cv">
+        <h2>Mon CV</h2>
+        <p>Vous pouvez télécharger mon CV ici :</p>
+        
+        <a href="./document/Cv_Titouan.pdf" download class="cv-button">
+          Télécharger le CV
+        </a>
+
+        </a>
+      </section>
     </main>
 
     <footer>
-      <section id="contact">
-        <h2>Contact</h2>
-        <p>Vous pouvez me contacter via les liens suivants :</p>
+      <div id="contact">
+  <h2>Contact</h2>
+  <p>Vous pouvez me contacter via les liens suivants :</p>
 
-        <div class="contact-links">
-          <!-- Lien LinkedIn centré -->
-          <a
-            href="https://www.linkedin.com/in/titouan-conquere-de-monbrison"
-            target="_blank"
-            class="contact-link"
-          >
-            <span class="icon">🤝</span> LinkedIn
-          </a>
+  <div class="contact-links">
+    <!-- Première ligne : LinkedIn centré -->
+    <a href="https://www.linkedin.com/in/titouan-conquere-de-monbrison" target="_blank" class="contact-link linkedin">
+      <span class="icon">🤝</span> LinkedIn
+    </a>
 
-          <!-- Groupe des emails (professionnel et personnel) à gauche -->
-          <div class="email-group">
-            <a
-              href="mailto:titouan.conquere-de-monbrison@efrei.net"
-              target="_blank"
-              class="contact-link"
-            >
-              <span class="icon">📧</span> Mail (Professionnel)
-            </a>
-            <a
-              href="mailto:titouancdm@gmail.com"
-              target="_blank"
-              class="contact-link"
-            >
-              <span class="icon" class="bas">✉️</span> Mail (Personnel)
-            </a>
-          </div>
+    <!-- Deuxième ligne : Mail pro à gauche, GitHub à droite -->
+    <div class="email-group">
+      <a href="mailto:titouan.conquere-de-monbrison@efrei.net" target="_blank" class="contact-link">
+        <span class="icon">📧</span> Mail (Professionnel)
+      </a>
+      <a href="https://github.com/Sh3tys/" target="_blank" class="contact-link">
+        <span class="icon">🐙</span> GitHub
+      </a>
+    </div>
 
-          <!-- Groupe GitHub et Discord à droite -->
-          <div class="social-group">
-            <a
-              href="https://github.com/Sh3tys/"
-              target="_blank"
-              class="contact-link"
-            >
-              <span class="icon">🐙</span> GitHub
-            </a>
-            <a
-              href="https://discord.com/channels/@me/1291074303684640952"
-              target="_blank"
-              class="contact-link"
-            >
-              <span class="icon" class="bas">🎮</span> Discord
-            </a>
-          </div>
-        </div>
-      </section>
+    <!-- Troisième ligne : Mail perso à gauche, Discord à droite -->
+    <div class="personal-group">
+      <a href="mailto:titouancdm@gmail.com" target="_blank" class="contact-link">
+        <span class="icon">✉️</span> Mail (Personnel)
+      </a>
+      <a href="https://discord.com/channels/@me/1291074303684640952" target="_blank" class="contact-link">
+        <span class="icon">🎮</span> Discord
+      </a>
+    </div>
+  </div>
+</div>
+
     </footer>
-    <script src="./index.js"></script>
+    <script src="./Acceuil.js"></script>
   </body>
 </html>

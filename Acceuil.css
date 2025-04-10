@@ -8,13 +8,24 @@
 }
 
 body {
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(34, 34, 34, 0.9));
   color: white;
   font-family: "Dharma Gothic", sans-serif;
   text-align: center;
   overflow-x: hidden;
   position: relative;
   min-height: 100vh;
+}
+
+/* VIDEO EN BACKGROUND */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.5); /* assombrit pour meilleure lisibilité */
 }
 
 /* Header */
@@ -189,74 +200,158 @@ p {
   min-width: 250px;
 }
 
-/* Section Contact */
-#contact {
-  margin: 0;
-  padding: 20x 0px; /* ajustable mais pas trop grand */
-  background-color: #000000;
+.cv-button {
+  display: inline-block;
+  background-color: #2ecc71;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.cv-button:hover {
+  background-color: #27ae60;
 }
 
 
+/* Section Contact */
+#contact {
+  margin: 0;
+  padding: 40px 0;
+  background-color: #1d1d1d; /* Gris foncé */
+  text-align: center;
+}
+
 #contact h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #fff;
+  font-weight: bold;
 }
 
 #contact p {
   font-size: 1.2rem;
   color: #ffffff;
+  margin-bottom: 25px;
 }
 
+/* Conteneur des liens de contact, en grille */
 .contact-links {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: 1fr; /* Une seule colonne pour la première ligne */
   gap: 20px;
-  align-items: center;
-  justify-content: center;
+  justify-items: center;
   margin-top: 20px;
 }
 
-.contact-link {
+/* Première ligne - LinkedIn centré */
+.contact-link.linkedin {
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.2rem;  /* Taille de police ajustée */
   color: #d4d3d3;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 8px 10px;
+  padding: 12px 20px;
   border-radius: 25px;
   transition: background-color 0.3s, color 0.3s;
-  background-color: rgb(43, 43, 43);
-  box-shadow: 0 4px 6px rgba(43, 43, 43, 0.1);
+  background-color: #2c2c2c;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 300px; /* Limite de largeur */
+  min-width: 300px;
+  width: auto; /* Ajuster la largeur selon le contenu */
+  box-sizing: border-box;
 }
 
-.contact-link:hover {
+.contact-link.linkedin:hover {
   background-color: #0073b1;
   color: white;
 }
 
 .contact-link .icon {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  margin-right: 10px;
 }
 
+/* Deuxième ligne - Mail Pro à gauche, GitHub à droite */
+.contact-links .email-group {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px; /* Espacement entre les boutons */
+  align-items: center;
+  width: 100%;
+}
 
+.contact-links .email-group a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #d4d3d3;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 12px 20px;
+  border-radius: 25px;
+  background-color: #2c2c2c;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 170px;
+  width: auto; /* Ajuster la largeur selon le contenu */
+  box-sizing: border-box;
+}
+
+.contact-links .email-group a:hover {
+  background-color: #0073b1;
+  color: white;
+}
+
+/* Groupe GitHub */
+.contact-links .email-group a:first-child {
+  margin-right: 0; /* Enlever l'espacement à droite du premier élément */
+}
+
+/* Troisième ligne - Mail perso à gauche, Discord à droite */
+.contact-links .personal-group {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px; /* Espacement entre les boutons */
+  align-items: center;
+  min-width: 170px;
+  width: 100%;
+}
+
+.contact-links .personal-group a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #d4d3d3;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 12px 20px;
+  border-radius: 25px;
+  background-color: #2c2c2c;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: auto; /* Ajuster la largeur selon le contenu */
+  box-sizing: border-box;
+}
+
+.contact-links .personal-group a:hover {
+  background-color: #0073b1;
+  color: white;
+}
+
+/* Footer */
 footer {
   background-color: #333;
   color: white;
   text-align: center;
-  padding: 5px 0;       /* Réduit l’espace vertical */
-  font-size: 0.85rem;    /* Texte un peu plus petit */
-  line-height: 1.2;      /* Moins d’interligne */
+  padding: 20px 0; /* Augmenter la taille du footer */
+  font-size: 1.2rem;    /* Augmenter la taille de la police du footer */
+  line-height: 1.5;
+  position: relative;
   bottom: 0;
-  left: 0;
+  width: 100%;
 }
 
-/* Canvas d'animation */
-#background-canvas {
-  position: fixed; /* Changer de absolute à fixed */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1; /* Assure que les particules sont derrière tout le contenu */
-}
+
+
