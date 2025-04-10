@@ -1,0 +1,55 @@
+@use 'variables' as *;
+
+ection {
+    padding: $margin-large $margin-small;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  h2 {
+    font-size: 36px;
+    margin-bottom: $margin-small;
+    border-bottom: 2px solid $color-cyan;
+    padding-bottom: 5px;
+  }
+  
+  p {
+    font-size: 18px;
+    max-width: 600px;
+    line-height: 1.6;
+  }
+  
+  /* Section Mon Parcours */
+  #parcours {
+    margin-left: 18%;
+    background-color: $color-dark;
+    padding: $padding-large $padding-small;
+    margin-top: $margin-medium;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 1000px;
+    margin-bottom: $margin-medium;
+  }
+  
+  #parcours h2 {
+    font-size: 32px;
+    color: $color-cyan;
+    margin-bottom: $margin-small;
+    text-align: center;
+  }
+  
+  #parcours p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: $color-light-gray;
+    margin-bottom: $margin-small;
+    text-align: justify;
+  }
+  
+  #parcours p strong {
+    color: $color-white;
+  }
+  

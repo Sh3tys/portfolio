@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #ffffff;
+  text-align: center;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+  font-family: "Arial", sans-serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(34, 34, 34, 0.9);
+  padding: 15px 40px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: cyan;
+  text-decoration: underline;
+  text-decoration-color: #000000;
+}
+
+ection {
+  padding: 100px 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid cyan;
+  padding-bottom: 5px;
+}
+
+p {
+  font-size: 18px;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* Section Mon Parcours */
+#parcours {
+  margin-left: 18%;
+  background-color: #1d1d1d;
+  padding: 40px 10px;
+  margin-top: 50px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 1000px;
+  margin-bottom: 50px;
+}
+
+#parcours h2 {
+  font-size: 32px;
+  color: cyan;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#parcours p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #d3d3d3;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+#parcours p strong {
+  color: #ffffff;
+}
+
+footer {
+  background-color: #333;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/*# sourceMappingURL=main.css.map */

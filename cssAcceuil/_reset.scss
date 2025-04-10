@@ -1,0 +1,19 @@
+@use 'variables' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-primary;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    color: $color-white;
+    text-align: center;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+    font-family: $font-primary;
+  }
+  
