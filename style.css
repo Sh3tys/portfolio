@@ -86,3 +86,13 @@
     color: #fff;
   }
   
+  /* Style pour la mention légale */
+.legal-notice {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 6px;
+  color: #555555; /* Gris foncé */
+  text-align: center;
+}
