@@ -6,14 +6,12 @@
   <title>Launcher Minecraft</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="./picture/MinecraftPlayer.png">
-
 </head>
 <body>
   <!-- VIDEO BACKGROUND -->
   <video autoplay muted loop id="bg-video">
     <source src="./Video/Minecraft_live_wallpaper_1.mp4" type="video/mp4">
   </video>  
-  
 
   <!-- CONTENU PRINCIPAL -->
   <div class="login-container">
@@ -22,11 +20,9 @@
       <p><strong><u>PORTFOLIO</u></strong></p>
       <p><strong>Titouan Conquere de Monbrison</strong></p>
 
-      <form class="login-form">
-        <input type="email" placeholder="Adresse e-mail" required>
-        <input type="password" placeholder="Mot de passe" required>
-
-        <button class="play-btn" onclick="window.location.href='Acceuil.html'">JOUER</button>
+      <form class="login-form" id="login-form">
+        <input type="email" id="email" placeholder="Adresse e-mail" required>
+        <button type="submit" class="play-btn" id="play-btn">JOUER</button>
 
         <div class="actions">
           <button type="button" class="alt-btn">Créer un compte</button>
@@ -35,5 +31,11 @@
       </form>
     </div>
   </div>
+
+  <!-- EmailJS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+  <!-- Script principal -->
+  <script src="./index.js"></script>
 </body>
 </html>
